@@ -621,9 +621,9 @@ else:
 
 st.markdown("---")
 
-# ═══════════════════════════════════════════════════════════════════════════════
+
 # SECTION 3 – INTERACTIVE MAP BY DEPARTMENT  (Plotly choropleth)
-# ═══════════════════════════════════════════════════════════════════════════════
+
 
 st.markdown("## 🗺️ Carte interactive des décès par suicide par département")
 st.markdown(
@@ -734,9 +734,9 @@ if not df_map.empty:
 
 st.markdown("---")
 
-# ═══════════════════════════════════════════════════════════════════════════════
+
 # SECTION 3bis – ÉVOLUTION PAR DÉPARTEMENT (JEUNES 10‑28 ANS)
-# ═══════════════════════════════════════════════════════════════════════════════
+
 
 st.markdown("## 📊 Évolution des décès par suicide chez les jeunes – par département")
 st.markdown(
@@ -768,7 +768,7 @@ dept_list = sorted(df_young_agg["Département"].unique())
 selected_depts = st.multiselect(
     "🔍 Choisissez un ou plusieurs départements :",
     options=dept_list,
-    default=dept_list[:3] if len(dept_list) >= 3 else dept_list,
+    default="Paris",
 )
 
 df_young_sel = df_young_agg[df_young_agg["Département"].isin(selected_depts)]
@@ -828,9 +828,9 @@ else:
 
 st.markdown("---")
 
-# ═══════════════════════════════════════════════════════════════════════════════
+
 # SECTION 4 – PREVENTION & HELP RESOURCES
-# ═══════════════════════════════════════════════════════════════════════════════
+
 
 st.markdown("## 🤝 Prévention et ressources d'aide")
 st.markdown(
@@ -916,3 +916,4 @@ st.markdown(
 """,
     unsafe_allow_html=True,
 )
+
