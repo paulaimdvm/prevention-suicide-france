@@ -916,37 +916,3 @@ st.markdown(
 """,
     unsafe_allow_html=True,
 )
-
-
-# ─── DEBUG : Vérifier les données avant chaque graphique ───────────────────
-
-st.write("### 🔍 DEBUG - Vérification des données")
-
-# 1️⃣ Pensées suicidaires par âge
-st.write("**df_age_baro (Pensées suicidaires par âge) :**")
-st.write(f"Nombre de lignes : {len(df_age_baro) if 'df_age_baro' in locals() else 'NON DÉFINI'}")
-if 'df_age_baro' in locals():
-    st.dataframe(df_age_baro.head())
-    st.write(f"Colonnes : {df_age_baro.columns.tolist()}")
-    st.write(f"Types : {df_age_baro.dtypes}")
-
-# 2️⃣ Pensées suicidaires selon situation financière
-st.write("**df_financial_sel (Situation financière) :**")
-st.write(f"Nombre de lignes : {len(df_financial_sel) if 'df_financial_sel' in locals() else 'NON DÉFINI'}")
-if 'df_financial_sel' in locals():
-    st.dataframe(df_financial_sel.head())
-    st.write(f"Colonnes : {df_financial_sel.columns.tolist()}")
-
-# 3️⃣ Décès par âge et sexe
-st.write("**df_age (Décès par âge) :**")
-st.write(f"Nombre de lignes : {len(df_age) if 'df_age' in locals() else 'NON DÉFINI'}")
-if 'df_age' in locals():
-    st.dataframe(df_age.head())
-    st.write(f"Colonnes : {df_age.columns.tolist()}")
-
-# 4️⃣ Tentatives par âge et sexe
-st.write("**df_attempt_age_sex (Tentatives par âge+sexe) :**")
-st.write(f"Nombre de lignes : {len(df_attempt_age_sex) if 'df_attempt_age_sex' in locals() else 'NON DÉFINI'}")
-if 'df_attempt_age_sex' in locals():
-    st.dataframe(df_attempt_age_sex.head())
-    st.write(f"Colonnes : {df_attempt_age_sex.columns.tolist()}")
