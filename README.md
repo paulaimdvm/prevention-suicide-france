@@ -31,7 +31,8 @@ prevention-suicide-france/
 │
 ├── app.py                 # Main Streamlit application              
 ├── *.csv                  # Data
-└──README.md               # Project documentation
+├── requirement.txt        # Requirement needed        
+└── README.md              # Project documentation
 
 ```
 
